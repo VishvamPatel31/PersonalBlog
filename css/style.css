@@ -1,5 +1,252 @@
-html, 
-body {
+html, body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#logo {
+    width: 1.45rem;
+    height: 1.45rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1.5em;
+    height: 60px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#title {
+    margin-left: 0.37em;
+}
+
+.company {
+    display: flex;
+    height: 1.45rem;
+    font-size: 0.84375rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+ul {
+    display: flex;
+    gap: 0.9375em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 0.75em;
+    transition: color 0.2s ease;
+}
+
+li a:hover {
+    color: #555;
+}
+
+.intro {
+    margin-top: 60px; /* Instead of padding-top on body */
+    width: 100%;
+    height: 18.31rem;
+    background-image: url("/images/article-image-hero.png");
+    background-size: cover;
+    font-family: "Source Sans 3", sans-serif;
+    color: white;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3125em;
+    font-family: "Source Sans 3", sans-serif;
+    color: white;
+    padding: 5.4375em 1.25em 1.5625em 1.25em;
+}
+
+#date {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+#hook {
+    font-weight: bold;
+    line-height: 108.2%;
+    font-size: 2rem;
+}
+
+#description {
+    font-size: 1rem;
+}
+
+.blog {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    padding: 0 1.25em; /* Adds left & right padding (~20px) */
+}
+
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+    font-family: "Source Sans 3", sans-serif;
+    gap: 0.3125em;
+    margin: 1.875em auto;
+    max-width: 23.6875rem;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.blogimage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#blogdate {
+    text-transform: uppercase;
+    font-size: 0.90625rem;
+    margin-top: 0.3125em;
+}
+
+#blogtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#blogdesc {
+    font-size: 1rem;
+}
+
+#viewbtn {
+    display: block;
+    background-color: #D7D7D7;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1rem;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    margin: 1em auto 3em auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#viewbtn:hover {
+    background-color: #c4c4c4;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 105px;
+    background-color: #202020;
+    align-items: center;
+    justify-content: center;
+}
+
+#footername, #copyright {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.75rem;
+}
+
+#copyright {
+    color: #D7D7D7;
+}
+
+#footername {
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #ECECEC;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Layout */
+
+@media (min-width: 770px) {
+    .blog {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.625em;
+    }
+    .blogs {
+        max-width: 21.875rem;
+    }
+    .section1 {
+        max-width: 600px;
+    }
+    #date {
+        font-size: 1rem;
+    }
+    #hook {
+        font-size: 2rem;
+    }
+    #description {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1070px) {
+    .blog {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+    }
+    .blogs {
+        min-width: 19.3125rem;
+    }
+    .section1 {
+        max-width: 715px;
+    }
+    #date {
+        font-size: 1.1rem;
+    }
+    #hook {
+        font-size: 2.2rem;
+    }
+    #description {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 420px) {
+    #hook {
+        font-size: 1.5rem;
+    }
+    #description {
+        font-size: 0.95rem;
+    }
+    ul {
+        gap: 0.5em;
+        font-size: 0.7rem;
+    }
 }

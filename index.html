@@ -1,9 +1,70 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>My Learning Journal</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <h1>index.html</h1>
-    </body>
+<head>
+    <title>My Learning Journal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="company">
+            <img src="/images/logo.png" id="logo">
+            <div id="title">My learning journal</div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#" id="homeLink">HOME</a></li>
+                <li><a href="#blog" id="aboutLink">ABOUT ME</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="intro">
+        <div class="section1">
+            <div id="date">April 5th, 2025</div>
+            <div id="hook">My new journey as a bootcamp student.</div>
+            <div id="description">
+                After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert 
+                code reviews of my Solo Projects projects and meet like-minded peers.
+            </div>
+        </div>
+    </div>
+        
+    <div id="blog" class="blog">
+        <div class="blogs">
+            <img class="blogimage" src="/images/blog1.png" alt="Blog one">
+            <div id="blogdate">April 5th, 2025</div>
+            <div id="blogtitle"> Blog one</div>
+            <div id="blogdesc">I'm excited to start a new learning journey as a Scrimba Bootcamp student! 
+                After several months of learning in the Frontend Developer Career Path.</div>
+        </div>
+
+        <div class="blogs">
+            <img class="blogimage" src="/images/blog2.png" alt="Blog two">
+            <div id="blogdate">April 5th, 2025</div>
+            <div id="blogtitle"> Blog two</div>
+            <div id="blogdesc">I'm excited to start a new learning journey as a Scrimba Bootcamp student! 
+                After several months of learning in the Frontend Developer Career Path.</div>
+        </div>
+
+        <div class="blogs">
+            <img class="blogimage" src="/images/blog3.png" alt="Blog three">
+            <div id="blogdate">April 5th, 2025</div>
+            <div id="blogtitle"> Blog three</div>
+            <div id="blogdesc">I'm excited to start a new learning journey as a Scrimba Bootcamp student! 
+                After several months of learning in the Frontend Developer Career Path.</div>
+        </div>
+    </div>
+
+    <button id="viewbtn"> View More </button>
+
+    <footer>
+        <div id="footername">Vishvam Patel</div>
+        <div id="copyright">Copyright @2025</div>
+    </footer>
+
+    <script src="/script/index.js" type="module"></script>
+</body>
 </html>
